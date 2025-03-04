@@ -80,9 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const cabinetSections = document.querySelectorAll('.cabinet__selected');
     cabinetButtons.forEach(button => {
         button.addEventListener('click', () => {
+            if (button.classList.contains('cabinet__select-btn--exit')) {
+                return;
+            }
             if (button.getAttribute('data-section') === 'purchases') {
                 switchActiveSection(0);
-            }
+            }            
             cabinetButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
             const sectionId = button.getAttribute('data-section');

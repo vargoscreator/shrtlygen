@@ -96,6 +96,7 @@ button,
     justify-content: center;
     text-align: center;
     width: 100%;
+    transition: all .2s ease;
 }
 .btn{
     font-family: 'Syne', sans-serif;
@@ -121,7 +122,13 @@ button,
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all .1s ease;
+}
+.btn:hover span{
+    background: #434346;
+    color: #34F050;
+}
+.btn:hover::after{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='38' viewBox='0 0 42 38' fill='none'%3E%3Crect width='42' height='38' rx='19' fill='%23434346'/%3E%3Cpath d='M28.5699 14.1231C28.6379 13.7197 28.366 13.3376 27.9626 13.2696L21.3887 12.1616C20.9853 12.0936 20.6031 12.3655 20.5351 12.7689C20.4671 13.1723 20.739 13.5545 21.1424 13.6225L26.986 14.6073L26.0011 20.4508C25.9331 20.8543 26.205 21.2364 26.6084 21.3044C27.0118 21.3724 27.394 21.1005 27.462 20.6971L28.5699 14.1231ZM15.4294 23.7394L28.269 14.6035L27.4101 13.3965L14.5706 22.5323L15.4294 23.7394Z' fill='%2334F050'/%3E%3C/svg%3E");
 }
 .btn-2{
     height: 48px;
@@ -131,6 +138,10 @@ button,
     background: #34F050;
     font-weight: 600;
     line-height: normal;
+}
+.btn-2:hover{
+    background-color: #434346;
+    color: #34F050;
 }
 .title-2{
     color: #434346;
@@ -1222,14 +1233,10 @@ main.main{
     text-underline-offset: auto;
     text-underline-position: from-font;
 }
-.pricing__item-buy{
+.pricing__item-buy {
     width: 100%;
     color: #000;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
     max-width: 100%;
     border-radius: 60px;
     background: #34F050;
@@ -1849,6 +1856,13 @@ main.main{
     top: 8px;
     right: -56px;
 }
+.who__item-btn:hover{
+    background-color: #434346;
+    color: #34F050;
+}
+.who__item-btn:hover::after{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='67' viewBox='0 0 70 67' fill='none'%3E%3Crect width='69.1201' height='67' rx='12' fill='%23434346'/%3E%3Cpath d='M45.1211 22L25.1211 42M25.1211 42H45.1211M25.1211 42V22' stroke='%2334F050' stroke-width='3'/%3E%3C/svg%3E");
+}
 .who__icon{
     margin: 30px auto 0;
     display: flex;
@@ -2377,6 +2391,11 @@ main.main{
     align-items: center;
     border-radius: 60px;
     background: #34F050;
+    transition: all .1s ease;
+}
+.blog__pages a:hover{
+    color: #34F050;
+    background: #434346;
 }
 a.blog__pages-last{
     height: 44px;
